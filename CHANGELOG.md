@@ -7,6 +7,16 @@ The 2.x line was published as pre-releases while it stabilised, which meant HACS
 installed 1.0.4 on the stable channel. **From 2.11.1 onward, releases are
 published normally** and HACS offers them without enabling beta versions.
 
+## Unreleased
+
+- **Surplus state survives a restart.** A Home Assistant restart (or an options
+  reload) used to forget the running surplus session, the force-charge switch and
+  any pause: a pause no longer stopped the charge in progress, force charge fell
+  back to off, and the departure deadline asked for the whole target energy
+  again. They are now saved and restored. A restored session is dropped if the
+  charger reports no vehicle on the first read; a car unplugged and replugged
+  during the outage cannot be detected.
+
 ## 2.27.0-beta5
 
 Pre-release: HACS offers it only with beta versions enabled.
