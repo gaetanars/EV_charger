@@ -878,7 +878,6 @@ class SolarSurplusController:
         self._session_active = False
         self._session_started_ts = None
         self._last_energy_sample_ts = None
-        self._last_decrease_action_ts = now
 
     def _update_session_energy(
         self,
