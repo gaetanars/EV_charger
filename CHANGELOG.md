@@ -7,6 +7,12 @@ The 2.x line was published as pre-releases while it stabilised, which meant HACS
 installed 1.0.4 on the stable channel. **From 2.11.1 onward, releases are
 published normally** and HACS offers them without enabling beta versions.
 
+## Unreleased
+
+- **Polling resumes after `release_connection`.** Once the loan expired, or was
+  ended early, the client stayed closed and every poll failed until the
+  integration was reloaded. It now reconnects by itself.
+
 ## 2.27.0-beta5
 
 Pre-release: HACS offers it only with beta versions enabled.
