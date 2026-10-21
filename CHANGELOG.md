@@ -7,6 +7,13 @@ The 2.x line was published as pre-releases while it stabilised, which meant HACS
 installed 1.0.4 on the stable channel. **From 2.11.1 onward, releases are
 published normally** and HACS offers them without enabling beta versions.
 
+## Unreleased
+
+- **A refused current write is now reported.** When the charger refused a ramp
+  adjustment, the decision sensor still showed the reason the controller had
+  decided (`adjust_current`, `load_limit_reduced`...). It now shows "The charger
+  refused the current", with the decided reason kept in the trace.
+
 ## 2.27.0-beta5
 
 Pre-release: HACS offers it only with beta versions enabled.
